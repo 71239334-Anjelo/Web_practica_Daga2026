@@ -1,0 +1,273 @@
+:root {
+    --blanco: #F8FAFC;
+    --oscuro: #171c49;
+    --primario: #171c49;
+    --secundario: #e91f4b;
+    --gris: #474858;
+    --grisClaro: #E2E8F0;
+}
+
+/* GLOBAL */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro), var(--blanco));
+    margin: 0;
+}
+
+/* TITULOS */
+h1 { font-size: 3.8rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 1.8rem; }
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* NAV */
+nav {
+    background-color: var(--secundario);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--primario);
+}
+
+/* HERO */
+body > section:first-of-type {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+    color: white;
+
+    /* 🔥 CENTRADO TOTAL */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: 1rem;
+}
+
+body > section:first-of-type::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,0.75);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+body > section:first-of-type * {
+    position: relative;
+    z-index: 1;
+}
+
+body > section:first-of-type h2 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+body > section:first-of-type p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* BOTON */
+section a {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1.2rem 3rem;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .5rem;
+}
+
+section a:hover {
+    background-color: var(--primario);
+}
+
+/* MAIN SERVICIOS */
+main {
+    max-width: 120rem;
+    margin: 5rem auto 0 auto; /* 🔥 SUBE el bloque como en la imagen */
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        background-color: var(--blanco);
+        border-radius: 1rem;
+    }
+}
+
+/* GRID SERVICIOS */
+@media (min-width: 768px) {
+    main {
+        display: block;
+    }
+
+    main > section {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+    }
+}
+
+/* TARJETAS SERVICIOS */
+main section {
+    text-align: center;
+    padding: 2rem;
+}
+
+main section h3 {
+    color: var(--secundario);
+}
+
+main section p {
+    line-height: 2;
+}
+
+/* ICONOS */
+main section svg {
+    background-color: var(--primario);
+    border-radius: 50%;
+    padding: 1.5rem;
+    display: block;
+    margin: 1rem auto;
+    width:  9rem;
+    height: 9rem;
+}
+
+.iconos svg {
+    background-color: transparent; /* 🔥 quita bolita individual */
+    border-radius: 0;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+}
+
+.iconos {
+    background-color: var(--primario); /* 🔵 UNA SOLA BOLITA */
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+/* FORMULARIO */
+form {
+    background-color: var(--gris);
+    max-width: 60rem;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+form fieldset {
+    border: none;
+}
+
+form legend {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secundario);
+}
+
+form label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+form textarea {
+    height: 15rem;
+}
+
+form button {
+    background-color: var(--secundario);
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+

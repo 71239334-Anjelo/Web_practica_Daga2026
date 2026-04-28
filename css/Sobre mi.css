@@ -1,0 +1,142 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* TITULOS */
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    letter-spacing: 1px; 
+}
+
+/* PERFIL */
+.perfil {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 50px;
+}
+
+/* FOTO */
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #22c55e;
+    margin-bottom: 15px;
+}
+
+/* NOMBRE */
+.perfil h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* DESCRIPCIÓN */
+.perfil p {
+    color: #cbd5f5;
+    margin-bottom: 10px;
+}
+
+/* DATOS */
+.datos p {
+    margin: 6px 0;
+    font-weight: 500;
+}
+
+/* PORTAFOLIO */
+.portafolio {
+    margin-top: 20px;
+}
+
+/* GRID */
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* TARJETA PROYECTO */
+.proyecto {
+    position: relative;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #111; /* 🔥 TEXTO NEGRO */
+    background: white; /* 🔥 FONDO CLARO */
+    transition: 0.4s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FONDO GRADIENTE */
+.proyecto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #60a5fa);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 1; /* 🔥 debajo del texto */
+}
+
+/* TEXTO ENCIMA */
+.proyecto span {
+    position: relative;
+    z-index: 2;
+}
+
+/* HOVER */
+.proyecto:hover {
+    transform: translateY(-8px);
+    color: white;
+}
+
+.proyecto:hover::before {
+    opacity: 1;
+}
+
+/* EFECTO BRILLO */
+.proyecto::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    top: -100%;
+    left: -100%;
+    transform: rotate(25deg);
+    transition: 0.6s;
+}
+
+.proyecto:hover::after {
+    top: 100%;
+    left: 100%;
+}

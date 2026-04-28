@@ -1,0 +1,333 @@
+:root {
+    --primario: #0f172a;
+    --primario-claro: #1e293b;
+    --secundario: #e11d48;
+    --secundario-hover: #be123c;
+    --gris: #6b7280;
+    --gris-texto: #94a3b8;
+    --blanco: #ffffff;
+    --fondo-tarjeta: #1e293b;
+    --fondo-tarjeta-hover: #334155;
+    --borde-glow: rgba(225, 29, 72, 0.3);
+    --sombra: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
+    --sombra-hover: 0 25px 45px -12px rgba(0, 0, 0, 0.4);
+    --border-radius: 1.25rem;
+}
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: var(--blanco);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* HEADER MEJORADO */
+header {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 27, 75, 0.95));
+    border-bottom: 1px solid rgba(225, 29, 72, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(225, 29, 72, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff, #e11d48);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--gris-texto);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* MAIN */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+}
+
+/* SECCION CLIENTES */
+.clientes {
+    margin: 2rem 0;
+}
+
+/* GRID RESPONSIVE */
+.grid-clientes {
+    display: grid;
+    gap: 2rem;
+}
+
+/* TARJETAS */
+.cliente {
+    background: var(--fondo-tarjeta);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.cliente:hover {
+    transform: translateY(-8px);
+    background: var(--fondo-tarjeta-hover);
+    border-color: var(--secundario);
+    box-shadow: var(--sombra-hover);
+}
+
+/* COMILLAS */
+.comillas {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+}
+
+.cliente:hover .comillas {
+    opacity: 0.3;
+}
+
+.comillas i {
+    font-size: 3rem;
+    color: var(--secundario);
+}
+
+/* COMENTARIO */
+.comentario {
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: var(--gris-texto);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    padding-right: 1rem;
+    min-height: 80px;
+}
+
+/* INFO CLIENTE */
+.info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+/* FOTO */
+.info img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secundario);
+    transition: transform 0.3s ease;
+}
+
+.cliente:hover .info img {
+    transform: scale(1.05);
+    border-color: #fff;
+}
+
+/* NOMBRE */
+.info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--blanco);
+}
+
+/* ESTRELLAS */
+.estrellas {
+    margin-top: 0.25rem;
+}
+
+.estrellas i {
+    font-size: 0.9rem;
+    margin-right: 0.1rem;
+}
+
+.estrellas .fas.fa-star {
+    color: #fbbf24;
+}
+
+.estrellas .fas.fa-star-half-alt {
+    color: #fbbf24;
+}
+
+.estrellas .far.fa-star {
+    color: #4b5563;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(15, 23, 42, 0.9);
+    margin-top: 3rem;
+    border-top: 1px solid rgba(225, 29, 72, 0.2);
+}
+
+footer p {
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablets */
+@media (min-width: 768px) {
+    .grid-clientes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    header h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .grid-clientes {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Móviles grandes */
+@media (min-width: 1400px) {
+    .grid-clientes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 640px) {
+    header {
+        padding: 2rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .cliente {
+        padding: 1.5rem;
+    }
+    
+    .comentario {
+        font-size: 0.9rem;
+        min-height: auto;
+    }
+    
+    .info img {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .info h3 {
+        font-size: 1rem;
+    }
+    
+    .estrellas i {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cliente {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* Stagger effect para cada tarjeta */
+.cliente:nth-child(1) { animation-delay: 0.05s; }
+.cliente:nth-child(2) { animation-delay: 0.1s; }
+.cliente:nth-child(3) { animation-delay: 0.15s; }
+.cliente:nth-child(4) { animation-delay: 0.2s; }
+.cliente:nth-child(5) { animation-delay: 0.25s; }
+.cliente:nth-child(6) { animation-delay: 0.3s; }
+.cliente:nth-child(7) { animation-delay: 0.35s; }
+.cliente:nth-child(8) { animation-delay: 0.4s; }
+.cliente:nth-child(9) { animation-delay: 0.45s; }
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primario);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secundario);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secundario-hover);
+}
