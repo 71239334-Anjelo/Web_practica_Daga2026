@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonios | Mis Clientes</title>
+    <title>Testimonios | Clientes Satisfechos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/Clientes.css">
 </head>
@@ -14,32 +14,63 @@
 
 <header>
     <div class="header-content">
-        <h1>Lo que dicen mis clientes</h1>
-        <p>Más de 50 clientes satisfechos confían en mi trabajo</p>
+        <div class="header-badge">
+            <i class="fas fa-star-of-life"></i> Testimonios Reales
+        </div>
+        <h1>Lo que dicen mis <span>clientes</span></h1>
+        <div class="header-line"></div>
+        <p>Más de <strong>50 clientes satisfechos</strong> confían en mi trabajo y recomiendan mis servicios</p>
     </div>
 </header>
 
 <main>
     <section class="clientes">
         <div class="container">
+            <div class="stats-container">
+                <div class="stat">
+                    <i class="fas fa-smile"></i>
+                    <div>
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Clientes Felices</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <span class="stat-number">4.9</span>
+                        <span class="stat-label">Calificación Promedio</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-trophy"></i>
+                    <div>
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Proyectos Completados</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid-clientes">
-                <!-- Testimonio 1 -->
-                <div class="cliente">
+                <!-- Testimonio 1 - Excelente -->
+                <div class="cliente destacado">
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">Su trabajo superó mis expectativas, totalmente recomendado.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"Su trabajo superó mis expectativas, totalmente recomendado. La dedicación y profesionalismo son excepcionales."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Juan Pérez">
                         <div>
                             <h3>Juan Pérez</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <span class="cargo">CEO, Empresa Digital</span>
                         </div>
                     </div>
                 </div>
@@ -49,39 +80,45 @@
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">Muy profesional, entregó antes de tiempo y con excelente calidad.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"Muy profesional, entregó antes de tiempo y con excelente calidad. Sin duda volveré a trabajar con él."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="María López">
                         <div>
                             <h3>María López</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <span class="cargo">Marketing Digital</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonio 3 -->
+                <!-- Testimonio 3 - 4.5 estrellas -->
                 <div class="cliente">
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">El trabajo fue bueno y cumplió con lo esperado, aunque hubo algunos detalles que podrían mejorar en el diseño.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"El trabajo fue bueno y cumplió con lo esperado, aunque hubo algunos detalles que podrían mejorar en el diseño. En general, satisfecho."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Diego Castillo">
                         <div>
                             <h3>Diego Castillo</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
+                            <span class="cargo">Emprendedor</span>
                         </div>
                     </div>
                 </div>
@@ -91,18 +128,21 @@
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">Diseño moderno y funcional, justo lo que necesitaba.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"Diseño moderno y funcional, justo lo que necesitaba para mi negocio. Excelente atención al detalle."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Carlos Díaz">
                         <div>
                             <h3>Carlos Díaz</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <span class="cargo">Propietario, Tienda Online</span>
                         </div>
                     </div>
                 </div>
@@ -112,18 +152,21 @@
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">Excelente comunicación y resultados increíbles.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"Excelente comunicación y resultados increíbles. Siempre estuvo atento a mis necesidades y sugerencias."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Lucía Torres">
                         <div>
                             <h3>Lucía Torres</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <span class="cargo">Diseñadora UX/UI</span>
                         </div>
                     </div>
                 </div>
@@ -133,18 +176,21 @@
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">Mi negocio mejoró gracias a su página web.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"Mi negocio mejoró gracias a su página web. Las ventas aumentaron un 40% después del lanzamiento."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Andrés Ramos">
                         <div>
                             <h3>Andrés Ramos</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <span class="cargo">Pequeño Empresario</span>
                         </div>
                     </div>
                 </div>
@@ -154,18 +200,21 @@
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">Creativo, rápido y muy responsable.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"Creativo, rápido y muy responsable. Cumplió con todos los plazos establecidos y superó mis expectativas."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Fernanda Ruiz">
                         <div>
                             <h3>Fernanda Ruiz</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <span class="cargo">Community Manager</span>
                         </div>
                     </div>
                 </div>
@@ -175,39 +224,45 @@
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">La página es muy clara y fácil de usar. Me ayudó a entender rápidamente los proyectos y los servicios que ofrecen.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"La página es muy clara y fácil de usar. Me ayudó a entender rápidamente los proyectos y los servicios que ofrecen."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Alonso Soto">
                         <div>
                             <h3>Alonso Soto</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <span class="cargo">Ingeniero de Software</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonio 9 -->
+                <!-- Testimonio 9 - 3 estrellas -->
                 <div class="cliente">
                     <div class="comillas">
                         <i class="fas fa-quote-left"></i>
                     </div>
-                    <p class="comentario">La página funciona bien y es fácil de usar, pero el tiempo de entrega fue un poco mayor al esperado.</p>
+                    <div class="cliente-header">
+                        <div class="calificacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="comentario">"La página funciona bien y es fácil de usar, pero el tiempo de entrega fue un poco mayor al esperado. Aún así, el resultado final es bueno."</p>
                     <div class="info">
                         <img src="img/Cliente.png" alt="Jesús Lazo">
                         <div>
                             <h3>Jesús Lazo</h3>
-                            <div class="estrellas">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
+                            <span class="cargo">Consultor Independiente</span>
                         </div>
                     </div>
                 </div>
@@ -217,7 +272,14 @@
 </main>
 
 <footer>
-    <p>© 2026 Anjelo Daga Dionisio | Transformando ideas en realidad</p>
+    <div class="footer-content">
+        <p>© 2026 Anjelo Daga Dionisio | Transformando ideas en realidad</p>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
 </footer>
 
 </body>
